@@ -1,0 +1,20 @@
+.food-display{
+    margin-top: 30px;
+}
+.food-display h2{
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+/* กำหนดรูปแบบของคอลัมน์ใน Grid โดยใช้ฟังก์ชัน repeat() และ minmax()
+** repeat(auto-fill, minmax(240px, 1fr)):
+- auto-fill: คำสั่งนี้บอกให้ Grid สร้างคอลัมน์ให้มากที่สุดเท่าที่จะทำได้โดยการเติมคอลัมน์ลงไปในแถว (row) ตามพื้นที่ที่มีอยู่
+- minmax(240px, 1fr): กำหนดขนาดของแต่ละคอลัมน์ให้อยู่ในช่วงระหว่าง 240px ถึง 1fr
+- 240px: เป็นค่าขั้นต่ำของความกว้างของคอลัมน์ ดังนั้นคอลัมน์จะมีความกว้างอย่างน้อย 240px
+- 1fr: เป็นค่าที่ใช้แบ่งพื้นที่ที่เหลือในแถวเท่าๆ กัน โดย "fr" ย่อมาจาก "fraction" หรือสัดส่วน ดังนั้น 1fr หมายถึงการแบ่งพื้นที่ที่เหลือออกเป็นสัดส่วนที่เท่ากัน */
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}
