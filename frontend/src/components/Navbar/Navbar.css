@@ -1,0 +1,58 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo{
+    width: 150px;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+/* การใช้ background: transparent; มีประโยชน์เมื่อคุณต้องการให้เนื้อหาขององค์ประกอบโปร่งใส หรือเมื่อคุณต้องการปรับแต่งการออกแบบของเว็บเพจให้ดูเรียบง่ายหรือให้พื้นหลังขององค์ประกอบอื่นๆปรากฏได้ */
+/* การใช้ transition: 0.3s; เป็นคำสั่งใน CSS ที่ใช้กำหนดการเปลี่ยนแปลงคุณสมบัติขององค์ประกอบให้เกิดขึ้นอย่างราบรื่นภายในเวลา 0.3 วินาที เมื่อมีการเปลี่ยนแปลงสถานะ เช่น เมื่อมีการโฮเวอร์เมาส์ หรือการคลิก โดยค่า 0.3s หมายถึง 0.3 วินาที */
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* outline: none; */
+}
+.navbar button:hover{
+    background-color: #fff4f2;
+}
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+.navbar li{
+    cursor: pointer;
+}
+/* การใช้ position: relative; มีประโยชน์เมื่อคุณต้องการปรับตำแหน่งขององค์ประกอบเล็กน้อยจากตำแหน่งปกติของมันโดยไม่ทำให้การจัดเรียงขององค์ประกอบอื่นๆ ในหน้าเว็บเปลี่ยนแปลงไป */
+.navbar-search-icon{
+    position: relative;
+}
+/* การใช้ position: absolute; มีประโยชน์เมื่อคุณต้องการควบคุมตำแหน่งขององค์ประกอบอย่างแม่นยำและแยกองค์ประกอบนั้นออกจากการจัดเรียงตามธรรมชาติของหน้าเว็บ */
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+}
